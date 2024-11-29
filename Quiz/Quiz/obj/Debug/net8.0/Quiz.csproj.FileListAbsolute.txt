@@ -150,3 +150,4 @@ C:\Users\BiG\OneDrive\Desktop\برنامه نویسی\کوییز\quiz2\Quiz\Quiz
 C:\Users\BiG\OneDrive\Desktop\برنامه نویسی\کوییز\quiz2\Quiz\Quiz\obj\Debug\net8.0\Quiz.pdb
 C:\Users\BiG\OneDrive\Desktop\برنامه نویسی\کوییز\quiz2\Quiz\Quiz\obj\Debug\net8.0\Quiz.genruntimeconfig.cache
 C:\Users\BiG\OneDrive\Desktop\برنامه نویسی\کوییز\quiz2\Quiz\Quiz\obj\Debug\net8.0\ref\Quiz.dll
+C:\Users\BiG\OneDrive\Desktop\برنامه نویسی\کوییز\quiz2\Quiz\Quiz\obj\Debug\net8.0\Quiz.sourcelink.json

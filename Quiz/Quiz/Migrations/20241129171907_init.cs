@@ -21,7 +21,10 @@ namespace Quiz.Migrations
                     HolderName = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     Balance = table.Column<float>(type: "real", nullable: false),
                     IsActice = table.Column<bool>(type: "bit", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false)
+                    Password = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    Daylitransaction = table.Column<float>(type: "real", nullable: false),
+                    SetedLimitationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    InsertingPasswordWrongly = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -57,14 +60,14 @@ namespace Quiz.Migrations
 
             migrationBuilder.InsertData(
                 table: "Cards",
-                columns: new[] { "CardNumber", "Balance", "HolderName", "IsActice", "Password" },
+                columns: new[] { "CardNumber", "Balance", "Daylitransaction", "HolderName", "InsertingPasswordWrongly", "IsActice", "Password", "SetedLimitationDate" },
                 values: new object[,]
                 {
-                    { "5859831000619801", 2000f, "Armin", true, "123" },
-                    { "5859831000619802", 2000f, "Mehdi", true, "123" },
-                    { "5859831000619803", 2000f, "Ali", true, "123" },
-                    { "5859831000619804", 2000f, "Arash", true, "123" },
-                    { "5859831000619805", 2000f, "Maryam", true, "123" }
+                    { "5859831000619801", 2000f, 0f, "Armin", 0, true, "123", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "5859831000619802", 2000f, 0f, "Mehdi", 0, true, "123", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "5859831000619803", 2000f, 0f, "Ali", 0, true, "123", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "5859831000619804", 2000f, 0f, "Arash", 0, true, "123", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "5859831000619805", 2000f, 0f, "Maryam", 0, true, "123", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
                 });
 
             migrationBuilder.CreateIndex(

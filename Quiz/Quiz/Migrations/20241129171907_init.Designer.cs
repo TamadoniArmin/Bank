@@ -12,7 +12,7 @@ using Quiz.DB;
 namespace Quiz.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241129092819_init")]
+    [Migration("20241129171907_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -34,10 +34,16 @@ namespace Quiz.Migrations
                     b.Property<float>("Balance")
                         .HasColumnType("real");
 
+                    b.Property<float>("Daylitransaction")
+                        .HasColumnType("real");
+
                     b.Property<string>("HolderName")
                         .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
+
+                    b.Property<int>("InsertingPasswordWrongly")
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsActice")
                         .HasColumnType("bit");
@@ -46,6 +52,9 @@ namespace Quiz.Migrations
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
+
+                    b.Property<DateTime>("SetedLimitationDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("CardNumber");
 
@@ -56,45 +65,60 @@ namespace Quiz.Migrations
                         {
                             CardNumber = "5859831000619801",
                             Balance = 2000f,
+                            Daylitransaction = 0f,
                             HolderName = "Armin",
+                            InsertingPasswordWrongly = 0,
                             IsActice = true,
-                            Password = "123"
+                            Password = "123",
+                            SetedLimitationDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             CardNumber = "5859831000619802",
                             Balance = 2000f,
+                            Daylitransaction = 0f,
                             HolderName = "Mehdi",
+                            InsertingPasswordWrongly = 0,
                             IsActice = true,
-                            Password = "123"
+                            Password = "123",
+                            SetedLimitationDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             CardNumber = "5859831000619803",
                             Balance = 2000f,
+                            Daylitransaction = 0f,
                             HolderName = "Ali",
+                            InsertingPasswordWrongly = 0,
                             IsActice = true,
-                            Password = "123"
+                            Password = "123",
+                            SetedLimitationDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             CardNumber = "5859831000619804",
                             Balance = 2000f,
+                            Daylitransaction = 0f,
                             HolderName = "Arash",
+                            InsertingPasswordWrongly = 0,
                             IsActice = true,
-                            Password = "123"
+                            Password = "123",
+                            SetedLimitationDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             CardNumber = "5859831000619805",
                             Balance = 2000f,
+                            Daylitransaction = 0f,
                             HolderName = "Maryam",
+                            InsertingPasswordWrongly = 0,
                             IsActice = true,
-                            Password = "123"
+                            Password = "123",
+                            SetedLimitationDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
-            modelBuilder.Entity("Quiz.Entity.Transaction", b =>
+            modelBuilder.Entity("Quiz.Entity.TransAction", b =>
                 {
                     b.Property<int>("TransactionId")
                         .ValueGeneratedOnAdd()
@@ -130,7 +154,7 @@ namespace Quiz.Migrations
                     b.ToTable("Transactions");
                 });
 
-            modelBuilder.Entity("Quiz.Entity.Transaction", b =>
+            modelBuilder.Entity("Quiz.Entity.TransAction", b =>
                 {
                     b.HasOne("Quiz.Entity.Card", "DestinationCard")
                         .WithMany("DestinationTransactions")

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Quiz.Entity;
 using Quiz.interfaces.Services;
 using Quiz.Repository;
 
@@ -20,6 +21,16 @@ namespace Quiz.Service
                 return false;
             }
             else { return true; }
+        }
+
+        public List<TransAction> GetListOfDestanceAction(string Cardnumber)
+        {
+            return repository.GetListOfDestanceAction(Cardnumber);
+        }
+
+        public List<TransAction> GetListOfSourceAction(string Cardnumber)
+        {
+            return repository.GetListOfSourceAction(Cardnumber);
         }
     }
 }

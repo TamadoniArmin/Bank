@@ -18,7 +18,10 @@ namespace Quiz.Entity
         public bool IsActice { get; set; }=true;
         [MaxLength(20)]
         public string Password { get; set; }
-        public List<Transaction>  SourceTransactions { get; set; }
-        public List<Transaction> DestinationTransactions { get; set; }
+        public float Daylitransaction { get; set; }
+        public DateTime SetedLimitationDate { get; set; }
+        public int InsertingPasswordWrongly { get; set; } = 0;
+        public List<TransAction>  SourceTransactions { get; set; }
+        public List<TransAction> DestinationTransactions { get; set; }
     }
 }

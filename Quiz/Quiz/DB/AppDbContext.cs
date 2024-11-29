@@ -20,5 +20,5 @@ public class AppDbContext : DbContext
         modelBuilder.ApplyConfiguration(new CardConfiguration());
     }
     public DbSet<Card> Cards { get; set; }
-    public DbSet<Transaction> Transactions { get; set; }
+    public DbSet<TransAction> Transactions { get; set; }
 }

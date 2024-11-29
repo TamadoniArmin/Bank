@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Quiz.Entity
 {
-    public class Transaction
+    public class TransAction
     {
         [Key]
         public int TransactionId { get; set; }

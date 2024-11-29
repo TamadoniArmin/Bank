@@ -17,31 +17,51 @@ namespace Quiz.Repository
         CardService cardService = new CardService();
         public bool AddTransaction(string SourceCardNumber, string DestinationCardNumber, int AmountOfMoney)
         {
-            var ReducingMoney = cardService.ReduceAmount(AmountOfMoney, SourceCardNumber);
-            if (!ReducingMoney)
+            try
             {
-                return false;
-            }
-            var FindCard=cardRepository.GetCardByNumber(DestinationCardNumber);
-            if (FindCard is null)
-            {
-                return false;
-            }
-            else
-            {
-                Transaction transaction = new Transaction()
+                var ReducingMoney = cardService.ReduceAmount(AmountOfMoney, SourceCardNumber, DestinationCardNumber);
+                if (!ReducingMoney)
                 {
-                    SourceCardNumber = SourceCardNumber,
-                    DestinationCardNumber = DestinationCardNumber,
-                    Amount = AmountOfMoney,
-                    TransactionDate = DateTime.Now,
-                    isSuccessful = true
-                };
-                _context.Transactions.Add(transaction);
-                _context.SaveChanges();
-                return true;
+                    return false;
+                }
+                var FindCard = cardRepository.GetCardByNumber(DestinationCardNumber);
+                if (FindCard is null)
+                {
+                    return false;
+                }
+                else
+                {
+                    TransAction transaction = new TransAction()
+                    {
+                        SourceCardNumber = SourceCardNumber,
+                        DestinationCardNumber = DestinationCardNumber,
+                        Amount = AmountOfMoney,
+                        TransactionDate = DateTime.Now,
+                        isSuccessful = true
+                    };
+                    _context.Transactions.Add(transaction);
+                    _context.SaveChanges();
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                cardService.IncreasAmount(AmountOfMoney, SourceCardNumber);
+                Console.WriteLine(ex.Message);
+                return false;
             }
 
+
+        }
+
+        public List<TransAction> GetListOfDestanceAction(string Cardnumber)
+        {
+            return _context.Transactions.Where(t=>t.SourceCard.CardNumber == Cardnumber).ToList();
+        }
+
+        public List<TransAction> GetListOfSourceAction(string Cardnumber)
+        {
+            return _context.Transactions.Where(t=>t.DestinationCard.CardNumber == Cardnumber).ToList();
         }
     }
 }

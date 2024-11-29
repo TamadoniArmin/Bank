@@ -9,9 +9,9 @@ using Quiz.Entity;
 
 namespace Quiz.InferaStructure.Configurations
 {
-    public class TransacrionConfiguration : IEntityTypeConfiguration<Transaction>
+    public class TransacrionConfiguration : IEntityTypeConfiguration<TransAction>
     {
-        public void Configure(EntityTypeBuilder<Transaction> builder)
+        public void Configure(EntityTypeBuilder<TransAction> builder)
         {
             builder.HasOne(t => t.SourceCard)
             .WithMany(c => c.SourceTransactions)
