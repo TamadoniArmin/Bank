@@ -14,11 +14,11 @@ namespace Quiz.InferaStructure.Configurations
         public void Configure(EntityTypeBuilder<Card> builder)
         {
             builder.HasData(
-                new Card { CardNumber = "5859831000619801", HolderName = "Armin", Password = "123", Balance = 2000 },
-                new Card { CardNumber = "5859831000619802", HolderName = "Mehdi", Password = "123", Balance = 2000 },
-                new Card { CardNumber = "5859831000619803", HolderName = "Ali", Password = "123", Balance = 2000 },
-                new Card { CardNumber = "5859831000619804", HolderName = "Arash", Password = "123", Balance = 2000 },
-                new Card { CardNumber = "5859831000619805", HolderName = "Maryam", Password = "123", Balance = 2000 }
+                new Card {Id=1, CardNumber = "5859831000619801", HolderId = 1, Password = "123", Balance = 2000 },
+                new Card {Id=2, CardNumber = "5859831000619802", HolderId = 1, Password = "123", Balance = 2000 },
+                new Card {Id=3, CardNumber = "5859831000619803", HolderId = 2, Password = "123", Balance = 2000 },
+                new Card {Id=4, CardNumber = "5859831000619804", HolderId = 2, Password = "123", Balance = 2000 },
+                new Card {Id=5, CardNumber = "5859831000619805", HolderId = 3, Password = "123", Balance = 2000 }
                 );
         }
     }

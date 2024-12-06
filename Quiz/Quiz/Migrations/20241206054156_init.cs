@@ -14,21 +14,44 @@ namespace Quiz.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Users",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Users", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Cards",
                 columns: table => new
                 {
                     CardNumber = table.Column<string>(type: "nvarchar(16)", maxLength: 16, nullable: false),
-                    HolderName = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
-                    Balance = table.Column<float>(type: "real", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false),
+                    HolderId = table.Column<int>(type: "int", nullable: false),
+                    Balance = table.Column<double>(type: "float", nullable: false),
                     IsActice = table.Column<bool>(type: "bit", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    Daylitransaction = table.Column<float>(type: "real", nullable: false),
+                    Daylitransaction = table.Column<double>(type: "float", nullable: false),
                     SetedLimitationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     InsertingPasswordWrongly = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Cards", x => x.CardNumber);
+                    table.ForeignKey(
+                        name: "FK_Cards_Users_HolderId",
+                        column: x => x.HolderId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -38,8 +61,11 @@ namespace Quiz.Migrations
                     TransactionId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     SourceCardNumber = table.Column<string>(type: "nvarchar(16)", maxLength: 16, nullable: false),
+                    SourceCardId = table.Column<int>(type: "int", nullable: false),
                     DestinationCardNumber = table.Column<string>(type: "nvarchar(16)", maxLength: 16, nullable: false),
-                    Amount = table.Column<float>(type: "real", nullable: false),
+                    DestinationCardId = table.Column<int>(type: "int", nullable: false),
+                    TransactionDetails = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Amount = table.Column<double>(type: "float", nullable: false),
                     TransactionDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     isSuccessful = table.Column<bool>(type: "bit", nullable: false)
                 },
@@ -59,16 +85,32 @@ namespace Quiz.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Cards",
-                columns: new[] { "CardNumber", "Balance", "Daylitransaction", "HolderName", "InsertingPasswordWrongly", "IsActice", "Password", "SetedLimitationDate" },
+                table: "Users",
+                columns: new[] { "Id", "Email", "Name", "Password", "UserName" },
                 values: new object[,]
                 {
-                    { "5859831000619801", 2000f, 0f, "Armin", 0, true, "123", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { "5859831000619802", 2000f, 0f, "Mehdi", 0, true, "123", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { "5859831000619803", 2000f, 0f, "Ali", 0, true, "123", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { "5859831000619804", 2000f, 0f, "Arash", 0, true, "123", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { "5859831000619805", 2000f, 0f, "Maryam", 0, true, "123", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
+                    { 1, "Armin@gmail.com", "Armin", "123", "armin" },
+                    { 2, "Ali@gmail.com", "Ali", "123", "ali" },
+                    { 3, "Mehdi@gmail.com", "Mehdi", "123", "mehdi" },
+                    { 4, "Nazanin@gmail.com", "Nazanin", "123", "nazanin" }
                 });
+
+            migrationBuilder.InsertData(
+                table: "Cards",
+                columns: new[] { "CardNumber", "Balance", "Daylitransaction", "HolderId", "Id", "InsertingPasswordWrongly", "IsActice", "Password", "SetedLimitationDate" },
+                values: new object[,]
+                {
+                    { "5859831000619801", 2000.0, 0.0, 1, 1, 0, true, "123", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "5859831000619802", 2000.0, 0.0, 1, 2, 0, true, "123", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "5859831000619803", 2000.0, 0.0, 2, 3, 0, true, "123", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "5859831000619804", 2000.0, 0.0, 2, 4, 0, true, "123", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "5859831000619805", 2000.0, 0.0, 3, 5, 0, true, "123", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Cards_HolderId",
+                table: "Cards",
+                column: "HolderId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Transactions_DestinationCardNumber",
@@ -89,6 +131,9 @@ namespace Quiz.Migrations
 
             migrationBuilder.DropTable(
                 name: "Cards");
+
+            migrationBuilder.DropTable(
+                name: "Users");
         }
     }
 }

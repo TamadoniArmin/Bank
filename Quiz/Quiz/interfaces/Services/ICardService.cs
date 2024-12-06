@@ -4,22 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
+using Quiz.Entity;
 
 namespace Quiz.interfaces.Services
 {
     public interface ICardService
     {
-        bool Login(string Cardnumber, string password);
-        float GetCardBalance(string Cardnumber);
-        bool ReduceAmount(int money, string cartnumber, string DistansCardnumber);
-        void IncreasAmount(int money, string cartnumber);
+        bool CheckPassword(string Cardnumber, string password);
+        void ChangePassword(string Cardnumber, string newpassword);
+        double GetCardBalance(string Cardnumber);
+        bool ReduceAmount(double money, string cartnumber, string DistansCardnumber);
+        void IncreasAmount(double money, string cartnumber);
         void ChangeStatus(string Cardnumber);
         bool GetCardByNumber(string Cardnumber);
         bool ActionsPermition(string Cardnumber);
         void SetLastTransactionDate(string Cardnumber);
         void ResetLastTransactionDate(string Cardnumber);
-        bool IncreasDailyTransaction(int money, string cartnumber);
+        bool IncreasDailyTransaction(double money, string cartnumber);
         void CheckTimesOfInsertingPasswordIncorrectly(string Cardnumber);
         void CountInstertPasswordWrong(string Cardnumber);
+        List<Card> GetListOfUserCards(string username);
+        Card GetDistancCard(string Cardnumber);
     }
 }

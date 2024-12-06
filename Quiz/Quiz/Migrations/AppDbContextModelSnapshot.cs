@@ -28,16 +28,17 @@ namespace Quiz.Migrations
                         .HasMaxLength(16)
                         .HasColumnType("nvarchar(16)");
 
-                    b.Property<float>("Balance")
-                        .HasColumnType("real");
+                    b.Property<double>("Balance")
+                        .HasColumnType("float");
 
-                    b.Property<float>("Daylitransaction")
-                        .HasColumnType("real");
+                    b.Property<double>("Daylitransaction")
+                        .HasColumnType("float");
 
-                    b.Property<string>("HolderName")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                    b.Property<int>("HolderId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
 
                     b.Property<int>("InsertingPasswordWrongly")
                         .HasColumnType("int");
@@ -55,15 +56,18 @@ namespace Quiz.Migrations
 
                     b.HasKey("CardNumber");
 
+                    b.HasIndex("HolderId");
+
                     b.ToTable("Cards");
 
                     b.HasData(
                         new
                         {
                             CardNumber = "5859831000619801",
-                            Balance = 2000f,
-                            Daylitransaction = 0f,
-                            HolderName = "Armin",
+                            Balance = 2000.0,
+                            Daylitransaction = 0.0,
+                            HolderId = 1,
+                            Id = 1,
                             InsertingPasswordWrongly = 0,
                             IsActice = true,
                             Password = "123",
@@ -72,9 +76,10 @@ namespace Quiz.Migrations
                         new
                         {
                             CardNumber = "5859831000619802",
-                            Balance = 2000f,
-                            Daylitransaction = 0f,
-                            HolderName = "Mehdi",
+                            Balance = 2000.0,
+                            Daylitransaction = 0.0,
+                            HolderId = 1,
+                            Id = 2,
                             InsertingPasswordWrongly = 0,
                             IsActice = true,
                             Password = "123",
@@ -83,9 +88,10 @@ namespace Quiz.Migrations
                         new
                         {
                             CardNumber = "5859831000619803",
-                            Balance = 2000f,
-                            Daylitransaction = 0f,
-                            HolderName = "Ali",
+                            Balance = 2000.0,
+                            Daylitransaction = 0.0,
+                            HolderId = 2,
+                            Id = 3,
                             InsertingPasswordWrongly = 0,
                             IsActice = true,
                             Password = "123",
@@ -94,9 +100,10 @@ namespace Quiz.Migrations
                         new
                         {
                             CardNumber = "5859831000619804",
-                            Balance = 2000f,
-                            Daylitransaction = 0f,
-                            HolderName = "Arash",
+                            Balance = 2000.0,
+                            Daylitransaction = 0.0,
+                            HolderId = 2,
+                            Id = 4,
                             InsertingPasswordWrongly = 0,
                             IsActice = true,
                             Password = "123",
@@ -105,9 +112,10 @@ namespace Quiz.Migrations
                         new
                         {
                             CardNumber = "5859831000619805",
-                            Balance = 2000f,
-                            Daylitransaction = 0f,
-                            HolderName = "Maryam",
+                            Balance = 2000.0,
+                            Daylitransaction = 0.0,
+                            HolderId = 3,
+                            Id = 5,
                             InsertingPasswordWrongly = 0,
                             IsActice = true,
                             Password = "123",
@@ -123,13 +131,19 @@ namespace Quiz.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactionId"));
 
-                    b.Property<float>("Amount")
-                        .HasColumnType("real");
+                    b.Property<double>("Amount")
+                        .HasColumnType("float");
+
+                    b.Property<int>("DestinationCardId")
+                        .HasColumnType("int");
 
                     b.Property<string>("DestinationCardNumber")
                         .IsRequired()
                         .HasMaxLength(16)
                         .HasColumnType("nvarchar(16)");
+
+                    b.Property<int>("SourceCardId")
+                        .HasColumnType("int");
 
                     b.Property<string>("SourceCardNumber")
                         .IsRequired()
@@ -138,6 +152,9 @@ namespace Quiz.Migrations
 
                     b.Property<DateTime>("TransactionDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("TransactionDetails")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("isSuccessful")
                         .HasColumnType("bit");
@@ -149,6 +166,80 @@ namespace Quiz.Migrations
                     b.HasIndex("SourceCardNumber");
 
                     b.ToTable("Transactions");
+                });
+
+            modelBuilder.Entity("Quiz.Entity.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Email = "Armin@gmail.com",
+                            Name = "Armin",
+                            Password = "123",
+                            UserName = "armin"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Email = "Ali@gmail.com",
+                            Name = "Ali",
+                            Password = "123",
+                            UserName = "ali"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Email = "Mehdi@gmail.com",
+                            Name = "Mehdi",
+                            Password = "123",
+                            UserName = "mehdi"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Email = "Nazanin@gmail.com",
+                            Name = "Nazanin",
+                            Password = "123",
+                            UserName = "nazanin"
+                        });
+                });
+
+            modelBuilder.Entity("Quiz.Entity.Card", b =>
+                {
+                    b.HasOne("Quiz.Entity.User", "Holder")
+                        .WithMany("cards")
+                        .HasForeignKey("HolderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Holder");
                 });
 
             modelBuilder.Entity("Quiz.Entity.TransAction", b =>
@@ -175,6 +266,11 @@ namespace Quiz.Migrations
                     b.Navigation("DestinationTransactions");
 
                     b.Navigation("SourceTransactions");
+                });
+
+            modelBuilder.Entity("Quiz.Entity.User", b =>
+                {
+                    b.Navigation("cards");
                 });
 #pragma warning restore 612, 618
         }

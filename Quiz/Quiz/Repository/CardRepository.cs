@@ -52,7 +52,7 @@ namespace Quiz.Repository
             _context.SaveChanges();
         }
 
-        public float GetCardBalance(string Cardnumber)
+        public double GetCardBalance(string Cardnumber)
         {
             var card = _context.Cards.AsNoTracking().FirstOrDefault(c => c.CardNumber == Cardnumber);
             return card.Balance;
@@ -60,9 +60,15 @@ namespace Quiz.Repository
 
         public Card? GetCardByNumber(string Cardnumber)
         {
-            return _context.Cards.FirstOrDefault(c => c.CardNumber == Cardnumber);
+            return _context.Cards.Include(u=>u.Holder).FirstOrDefault(c => c.CardNumber == Cardnumber);
         }
-        public void IncreasAmount(int money, string cartnumber)
+
+        public List<Card> GetListOfUserCards(string username)
+        {
+            return _context.Cards.Where(c=>c.Holder.UserName == username).ToList();
+        }
+
+        public void IncreasAmount(double money, string cartnumber)
         {
             var card = GetCardByNumber(cartnumber);
             if (card is not null)
@@ -73,10 +79,10 @@ namespace Quiz.Repository
 
         }
 
-        public bool IncreasDailyTransaction(int money, string cartnumber)
+        public bool IncreasDailyTransaction(double money, string cartnumber)
         {
             var card= GetCardByNumber(cartnumber);
-            if (card.Daylitransaction+money>=250)
+            if (card.Daylitransaction+money<=100000)
             {
                 card.Daylitransaction += money;
                 _context.SaveChanges();
@@ -85,7 +91,7 @@ namespace Quiz.Repository
             return false; 
         }
 
-        public bool Login(string Cardnumber, string password)
+        public bool CheckPassword(string Cardnumber, string password)
         {
             bool res1 = CardIsActive(Cardnumber);
             bool res2= _context.Cards.Any( c=> c.CardNumber==Cardnumber && c.Password==password);
@@ -96,7 +102,7 @@ namespace Quiz.Repository
             return false;
         }
 
-        public bool ReduceAmount(int money, string cartnumber)
+        public bool ReduceAmount(double money, string cartnumber)
         {
             var card=GetCardByNumber(cartnumber);
             var balance=GetCardBalance(cartnumber);
@@ -132,5 +138,18 @@ namespace Quiz.Repository
                 _context.SaveChanges();
             }
         }
+
+        public bool ChangePassword(string Cardnumber, string newpassword)
+        {
+            var card= GetCardByNumber(Cardnumber);
+            if(card is not null)
+            {
+                card.Password = newpassword;
+                _context.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
     }
 }

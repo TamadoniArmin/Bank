@@ -12,7 +12,7 @@ namespace Quiz.Service
     public class TransactionService : ITransactionService
     {
         TransactionRepository repository=new TransactionRepository();
-        public bool AddTransaction(string SourceCardNumber, string DestinationCardNumber, int AmountOfMoney)
+        public bool AddTransaction(string SourceCardNumber, string DestinationCardNumber, double AmountOfMoney)
         {
             var ResultOfAction= repository.AddTransaction(SourceCardNumber, DestinationCardNumber, AmountOfMoney);
             if (!ResultOfAction)

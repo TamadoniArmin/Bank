@@ -9,7 +9,7 @@ namespace Quiz.interfaces.Services
 {
     public interface ITransactionService
     {
-        bool AddTransaction(string SourceCardNumber, string DestinationCardNumber, int AmountOfMoney);
+        bool AddTransaction(string SourceCardNumber, string DestinationCardNumber, double AmountOfMoney);
         List<TransAction> GetListOfSourceAction(string Cardnumber);
         List<TransAction> GetListOfDestanceAction(string Cardnumber);
     }

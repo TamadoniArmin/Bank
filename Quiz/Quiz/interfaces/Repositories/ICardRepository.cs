@@ -10,17 +10,19 @@ namespace Quiz.interfaces.Repositories
     public interface ICardRepository
     {
         bool ActionsPermition(string Cardnumber);
-        bool Login(string Cardnumber, string password);
+        bool CheckPassword(string Cardnumber, string password);
+        bool ChangePassword(string Cardnumber, string newpassword);
         bool CardIsActive(string Cardnumber);
-        float GetCardBalance(string Cardnumber);
-        bool ReduceAmount(int money, string cartnumber);
+        double GetCardBalance(string Cardnumber);
+        bool ReduceAmount(double money, string cartnumber);
         void CountInstertPasswordWrong(string Cardnumber);
-        void IncreasAmount(int money, string cartnumber);
+        void IncreasAmount(double money, string cartnumber);
         Card? GetCardByNumber(string Cardnumber);
         void ChangeStatus(string Cardnumber);
         void SetLastTransactionDate(string Cardnumber);
         void ResetLastTransactionDate(string Cardnumber);
-        bool IncreasDailyTransaction(int money, string cartnumber);
+        bool IncreasDailyTransaction(double money, string cartnumber);
         int CheckTimesOfInsertingPasswordIncorrectly(string Cardnumber);
+        List<Card> GetListOfUserCards(string username);
     }
 }

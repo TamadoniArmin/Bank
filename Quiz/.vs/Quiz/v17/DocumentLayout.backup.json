@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4ABE54EA-E381-4955-AFCC-3E3D4513FC38}|Quiz\\Quiz.csproj|c:\\users\\big\\onedrive\\desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\quiz\\quiz\\entity\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ABE54EA-E381-4955-AFCC-3E3D4513FC38}|Quiz\\Quiz.csproj|solutionrelative:quiz\\entity\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ABE54EA-E381-4955-AFCC-3E3D4513FC38}|Quiz\\Quiz.csproj|c:\\users\\big\\onedrive\\desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\quiz\\quiz\\entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ABE54EA-E381-4955-AFCC-3E3D4513FC38}|Quiz\\Quiz.csproj|solutionrelative:quiz\\entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ABE54EA-E381-4955-AFCC-3E3D4513FC38}|Quiz\\Quiz.csproj|c:\\users\\big\\onedrive\\desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\quiz\\quiz\\entity\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ABE54EA-E381-4955-AFCC-3E3D4513FC38}|Quiz\\Quiz.csproj|solutionrelative:quiz\\entity\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ABE54EA-E381-4955-AFCC-3E3D4513FC38}|Quiz\\Quiz.csproj|c:\\users\\big\\onedrive\\desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\quiz\\quiz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ABE54EA-E381-4955-AFCC-3E3D4513FC38}|Quiz\\Quiz.csproj|solutionrelative:quiz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ABE54EA-E381-4955-AFCC-3E3D4513FC38}|Quiz\\Quiz.csproj|c:\\users\\big\\onedrive\\desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\quiz\\quiz\\service\\cardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ABE54EA-E381-4955-AFCC-3E3D4513FC38}|Quiz\\Quiz.csproj|solutionrelative:quiz\\service\\cardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ABE54EA-E381-4955-AFCC-3E3D4513FC38}|Quiz\\Quiz.csproj|c:\\users\\big\\onedrive\\desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\quiz\\quiz\\repository\\cardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ABE54EA-E381-4955-AFCC-3E3D4513FC38}|Quiz\\Quiz.csproj|solutionrelative:quiz\\repository\\cardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4ABE54EA-E381-4955-AFCC-3E3D4513FC38}|Quiz\\Quiz.csproj|c:\\users\\big\\onedrive\\desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\quiz\\quiz\\repository\\transactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4ABE54EA-E381-4955-AFCC-3E3D4513FC38}|Quiz\\Quiz.csproj|solutionrelative:quiz\\repository\\transactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,12 +35,8 @@
       "RelativeMoniker": "D:0:0:{4ABE54EA-E381-4955-AFCC-3E3D4513FC38}|Quiz\\Quiz.csproj|solutionrelative:quiz\\interfaces\\repositories\\itransactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4ABE54EA-E381-4955-AFCC-3E3D4513FC38}|Quiz\\Quiz.csproj|c:\\users\\big\\onedrive\\desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\quiz\\quiz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4ABE54EA-E381-4955-AFCC-3E3D4513FC38}|Quiz\\Quiz.csproj|solutionrelative:quiz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4ABE54EA-E381-4955-AFCC-3E3D4513FC38}|Quiz\\Quiz.csproj|c:\\users\\big\\onedrive\\desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\quiz\\quiz\\repository\\cardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4ABE54EA-E381-4955-AFCC-3E3D4513FC38}|Quiz\\Quiz.csproj|solutionrelative:quiz\\repository\\cardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4ABE54EA-E381-4955-AFCC-3E3D4513FC38}|Quiz\\Quiz.csproj|c:\\users\\big\\onedrive\\desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\quiz\\quiz\\interfaces\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ABE54EA-E381-4955-AFCC-3E3D4513FC38}|Quiz\\Quiz.csproj|solutionrelative:quiz\\interfaces\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,59 +46,126 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TransactionRepository.cs",
-              "DocumentMoniker": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\Repository\\TransactionRepository.cs",
-              "RelativeDocumentMoniker": "Quiz\\Repository\\TransactionRepository.cs",
-              "ToolTip": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\Repository\\TransactionRepository.cs",
-              "RelativeToolTip": "Quiz\\Repository\\TransactionRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T17:25:29.012Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ITransactionRepository.cs",
-              "DocumentMoniker": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\interfaces\\Repositories\\ITransactionRepository.cs",
-              "RelativeDocumentMoniker": "Quiz\\interfaces\\Repositories\\ITransactionRepository.cs",
-              "ToolTip": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\interfaces\\Repositories\\ITransactionRepository.cs",
-              "RelativeToolTip": "Quiz\\interfaces\\Repositories\\ITransactionRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T17:25:21.385Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CardRepository.cs",
-              "DocumentMoniker": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\Repository\\CardRepository.cs",
-              "RelativeDocumentMoniker": "Quiz\\Repository\\CardRepository.cs",
-              "ToolTip": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\Repository\\CardRepository.cs",
-              "RelativeToolTip": "Quiz\\Repository\\CardRepository.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowFkAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T17:21:08.076Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\Program.cs",
               "RelativeDocumentMoniker": "Quiz\\Program.cs",
               "ToolTip": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\Program.cs",
               "RelativeToolTip": "Quiz\\Program.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAuwAMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T16:57:13.306Z",
+              "WhenOpened": "2024-12-02T17:00:56.789Z",
+              "IsPinned": true,
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TransAction.cs",
+              "DocumentMoniker": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\Entity\\TransAction.cs",
+              "RelativeDocumentMoniker": "Quiz\\Entity\\TransAction.cs",
+              "ToolTip": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\Entity\\TransAction.cs",
+              "RelativeToolTip": "Quiz\\Entity\\TransAction.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T06:30:26.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\Entity\\User.cs",
+              "RelativeDocumentMoniker": "Quiz\\Entity\\User.cs",
+              "ToolTip": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\Entity\\User.cs",
+              "RelativeToolTip": "Quiz\\Entity\\User.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T06:30:08.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\Entity\\Card.cs",
+              "RelativeDocumentMoniker": "Quiz\\Entity\\Card.cs",
+              "ToolTip": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\Entity\\Card.cs",
+              "RelativeToolTip": "Quiz\\Entity\\Card.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAABIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T06:29:26.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CardService.cs",
+              "DocumentMoniker": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\Service\\CardService.cs",
+              "RelativeDocumentMoniker": "Quiz\\Service\\CardService.cs",
+              "ToolTip": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\Service\\CardService.cs",
+              "RelativeToolTip": "Quiz\\Service\\CardService.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAmwHAAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T06:19:18.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\interfaces\\Repositories\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Quiz\\interfaces\\Repositories\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\interfaces\\Repositories\\IUserRepository.cs",
+              "RelativeToolTip": "Quiz\\interfaces\\Repositories\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T19:40:55.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ITransactionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\interfaces\\Repositories\\ITransactionRepository.cs",
+              "RelativeDocumentMoniker": "Quiz\\interfaces\\Repositories\\ITransactionRepository.cs",
+              "ToolTip": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\interfaces\\Repositories\\ITransactionRepository.cs",
+              "RelativeToolTip": "Quiz\\interfaces\\Repositories\\ITransactionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T19:40:49.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CardRepository.cs",
+              "DocumentMoniker": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\Repository\\CardRepository.cs",
+              "RelativeDocumentMoniker": "Quiz\\Repository\\CardRepository.cs",
+              "ToolTip": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\Repository\\CardRepository.cs",
+              "RelativeToolTip": "Quiz\\Repository\\CardRepository.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAuwFQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T11:44:28.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TransactionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\Repository\\TransactionRepository.cs",
+              "RelativeDocumentMoniker": "Quiz\\Repository\\TransactionRepository.cs",
+              "ToolTip": "C:\\Users\\BiG\\OneDrive\\Desktop\\\u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06CC\u0633\u06CC\\\u06A9\u0648\u06CC\u06CC\u0632\\quiz2\\Quiz\\Quiz\\Repository\\TransactionRepository.cs",
+              "RelativeToolTip": "Quiz\\Repository\\TransactionRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAqwBIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T11:48:16.114Z"
             }
           ]
         }

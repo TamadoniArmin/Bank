@@ -38,7 +38,7 @@ namespace Quiz.Service
             cardRepository.CountInstertPasswordWrong(Cardnumber);
         }
 
-        public float GetCardBalance(string Cardnumber)
+        public double GetCardBalance(string Cardnumber)
         {
             return cardRepository.GetCardBalance(Cardnumber);
         }
@@ -52,41 +52,73 @@ namespace Quiz.Service
             }
             return true;
         }
-        public void IncreasAmount(int money, string cartnumber)
+
+        public List<Card> GetListOfUserCards(string username)
         {
+            return cardRepository.GetListOfUserCards(username);
+        }
+
+        public void IncreasAmount(double money, string cartnumber)
+        {
+            var CheckExist=cardRepository.GetCardByNumber(cartnumber);
+            if (CheckExist==null)
+            {
+                Console.WriteLine("We can not Find Your Destonation Card!");
+            }
             cardRepository.IncreasAmount(money, cartnumber);
         }
 
-        public bool IncreasDailyTransaction(int money, string cartnumber)
+        public bool IncreasDailyTransaction(double money, string cartnumber)
         {
             return cardRepository.IncreasDailyTransaction(money, cartnumber);
         }
 
-        public bool Login(string Cardnumber, string password)
+        public bool CheckPassword(string Cardnumber, string password)
         {
-            return cardRepository.Login(Cardnumber, password);
+            return cardRepository.ChangePassword(Cardnumber, password);
         }
 
-        public bool ReduceAmount(int money, string cartnumber, string DistansCardnumber)
+        public bool ReduceAmount(double money, string cartnumber, string DistansCardnumber)
         {
             var DistanceCard= cardRepository.GetCardByNumber(DistansCardnumber);
             if (DistanceCard is null)
             {
+                Console.WriteLine("We can not Find Your Destonation Card!");
                 return false;
             }
             else
             {
                 if (money <= 0)
                 {
+                    Console.WriteLine("The enterd amount must be more than ZERO");
                     return false;
                 }
-                var action = cardRepository.ReduceAmount(money, cartnumber);
-                if (!action)
+                else
                 {
-                    Console.WriteLine("You don't have enough nomey!");
-                    return false;
+                    double MoneyWithTax;
+                    if(money > 1000)
+                    {
+                        MoneyWithTax = money * 0.015;
+
+                        var action = cardRepository.ReduceAmount(MoneyWithTax+money, cartnumber);
+                        if (!action)
+                        {
+                            Console.WriteLine("You don't have enough nomey!");
+                            return false;
+                        }
+                    }
+                    else if (10<=money && money < 1000)
+                    {
+                        MoneyWithTax = money * 0.005;
+                        var action = cardRepository.ReduceAmount(MoneyWithTax+money, cartnumber);
+                        if (!action)
+                        {
+                            Console.WriteLine("You don't have enough nomey!");
+                            return false;
+                        }
+                    }
+                    return true;
                 }
-                return true;
             }
         }
 
@@ -98,6 +130,24 @@ namespace Quiz.Service
         public void SetLastTransactionDate(string Cardnumber)
         {
             cardRepository.SetLastTransactionDate(Cardnumber);
+        }
+
+        public void ChangePassword(string Cardnumber, string newpassword)
+        {
+            var ResultOfChangePass= cardRepository.ChangePassword(Cardnumber, newpassword);
+            if (ResultOfChangePass)
+            {
+                Console.WriteLine("Done.");
+            }
+            else
+            {
+                Console.WriteLine("Ooops....Something Goes wrong! Please try again.");
+            }
+        }
+
+        public Card GetDistancCard(string Cardnumber)
+        {
+            return cardRepository.GetCardByNumber(Cardnumber);
         }
     }
 }
